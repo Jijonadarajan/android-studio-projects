@@ -1,0 +1,96 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+    home: new myapp(),
+  ));
+}
+
+class myapp extends StatefulWidget {
+  const myapp({super.key});
+
+  @override
+  State<myapp> createState() => _myappState();
+}
+
+class _myappState extends State<myapp> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        /*   leading: IconButton(
+          icon: (Icon(Icons.menu)),
+          onPressed: () {},
+        ),*/
+        title: Text('Nadarajan APP'),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.search),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: Icon(Icons.more_vert),
+            onPressed: () {},
+          )
+        ],
+      ),
+      body: Center(
+        child: Text(
+          'JIJO N',
+          style: TextStyle(
+              fontSize: 80,
+              fontStyle: FontStyle.italic,
+              color: Colors.deepOrange),
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          print('jo');
+        },
+        child: Icon(Icons.icecream),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      drawer: Drawer(
+        elevation: 8,
+        child: Column(
+          children: [
+            UserAccountsDrawerHeader(
+              accountName: Text('JIJO N'),
+              accountEmail: Text('jijonadrajan0701@gmail.com'),
+              currentAccountPicture: CircleAvatar(
+                backgroundColor: Colors.purple,
+                child: Text('jo'),
+              ),
+            ),
+            ListTile(title: Text('All Inbox'), leading: Icon(Icons.mail)),
+            Divider(
+              height: 1,
+              color: Colors.black87,
+            ),
+            ListTile(title: Text('All Inbox'), leading: Icon(Icons.mail)),
+            Divider(
+              height: 1,
+              color: Colors.black87,
+            ),
+            ListTile(title: Text('All Inbox'), leading: Icon(Icons.mail)),
+            Divider(
+              height: 1,
+              color: Colors.black87,
+            ),
+            ListTile(title: Text('All Inbox'), leading: Icon(Icons.mail)),
+            Divider(
+              height: 1,
+              color: Colors.black87,
+            )
+          ],
+        ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "home"),
+          BottomNavigationBarItem(icon: Icon(Icons.search), label: 'search')
+        ],
+      ),
+    );
+  }
+}
