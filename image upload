@@ -1,0 +1,33 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const jo());
+}
+
+class jo extends StatefulWidget {
+  const jo({super.key});
+
+  @override
+  State<jo> createState() => _joState();
+}
+
+class _joState extends State<jo> {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+      appBar: AppBar(
+        title: Text('jo'),
+      ),
+      body: Center(
+        child: Container(
+          height: 400,
+          width: 400,
+          decoration: BoxDecoration(border: Border.all()),
+          child: Image.network(
+              'https://www.google.com/search?sca_esv=40a49942b39644b8&sxsrf=ACQVn0-o4dZz74Re3B7YAcIjxFEa7xfWEw:1710871376390&q=ms+dhoni&uds=AMwkrPsm7OC6wr_wb2psDRJUVbCqOjp5qIGPG4FGS0QbO-uSyDTByFm5Rmn0kBNDV6vKrLb9OgRg-6t8TxgNExXCHSJZDdc_HloFZT83pF3cJDkR_Ev7FfGeOHHoR9jFRF_OFcr5nmdjcLNzFsONcWzdFA-bxkXHDEhlCNWLN9ZFch7hhXrhNOLNkQl1j57c7LHDbMIv4mJWbnUEqs5naaQZCTw2mG_HIpR6XKagNWHuCfL14FAxluBGjSlDaJ1EwT8SWj0Ql7rwoUwGkg_UpTBr30a7rGsXo1VOHNOUFYnpIq68E7QtjkA&udm=2&prmd=invsmbtz&sa=X&ved=2ahUKEwiIopXF9ICFAxXoS2wGHSvsCM4QtKgLegQIChAB&biw=1536&bih=735&dpr=1.25#vhid=34uVEAmWIYRjiM&vssid=mosaic'),
+        ),
+      ),
+    ));
+  }
+}
